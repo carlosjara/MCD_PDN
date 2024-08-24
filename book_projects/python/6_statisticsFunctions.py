@@ -60,3 +60,5 @@ fire_ts_df = (new_fire_df
 (fire_ts_df
  .select(F.sum("NumAlarms").alias("SUMA_TOTAL"), F.avg("ResponseDelayedinMins"), F.min("ResponseDelayedinMins"), F.max("ResponseDelayedinMins"))
  .show())
+
+#%%

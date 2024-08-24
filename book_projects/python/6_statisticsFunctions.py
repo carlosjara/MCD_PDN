@@ -61,6 +61,7 @@ fire_ts_df = (new_fire_df
  .select(F.sum("NumAlarms").alias("SUMA_TOTAL"), F.avg("ResponseDelayedinMins"), F.min("ResponseDelayedinMins"), F.max("ResponseDelayedinMins"))
  .show())
 
+<<<<<<< HEAD
 
 # • What were all the different types of fire calls in 2018?
 # • What months within the year 2018 saw the highest number of fire calls?
@@ -69,3 +70,6 @@ fire_ts_df = (new_fire_df
 # • Which week in the year in 2018 had the most fire calls?
 # • Is there a correlation between neighborhood, zip code, and number of fire calls?
 # • How can we use Parquet files or SQL tables to store this data and read it back?
+=======
+#%%
+>>>>>>> b6dc5b100b8853b9ba696f8467a06030de0222c0

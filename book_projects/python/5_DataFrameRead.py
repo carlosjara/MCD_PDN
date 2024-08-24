@@ -6,7 +6,7 @@ from pyspark.sql.functions import *
 
 spark = (SparkSession
             .builder
-            .appName("RowDataFrame-3_6")
+            .appName("ReadFromCSV")
             .getOrCreate()
 )
 
@@ -43,14 +43,17 @@ fire_schema = StructType([StructField('CallNumber', IntegerType(), True),
 sf_fire_file = "data/sf-fire-calls.csv"
 fire_df = spark.read.csv(sf_fire_file, header=True, schema=fire_schema)
 
+# In Python to save as a Parquet file
+# parquet_path = "output/python/fire_df_data"
+# fire_df.write.format("parquet").save(parquet_path)
+
 # In Python .. using show using filter
 few_fire_df = (fire_df
  .select("IncidentNumber", "AvailableDtTm", "CallType")
  .where(col("CallType") != "Medical Incident"))
 #few_fire_df.show(5, truncate=False)
 
-
-# In Python, return number of distinct types of calls using countDistinct()
+# # In Python, return number of distinct types of calls using countDistinct()
 count_distincts = (fire_df
  .select("CallType")
  .where(col("CallType").isNotNull())
@@ -65,7 +68,7 @@ value_disintct = (fire_df
  .where(col("CallType").isNotNull())
  .distinct()
  )
-#value_disintct.show(10, False)
+# value_disintct.show(10, False)
 
 
 # In Python rename column
@@ -73,8 +76,9 @@ new_fire_df = fire_df.withColumnRenamed("Delay", "ResponseDelayedinMins")
 (new_fire_df
  .select("ResponseDelayedinMins")
  .where(col("ResponseDelayedinMins") > 5)
+ #.show(10, False)
  )
-#new_fire_df.show(5, False)
+# new_fire_df.show(5, truncate=True)
 
 # In Python Modifying Content Column (to_date and to_timestamp)
 fire_ts_df = (fire_df
@@ -87,31 +91,27 @@ fire_ts_df = (fire_df
 # Select the converted columns
 (fire_ts_df
  .select("IncidentDate", "OnWatchDate", "AvailableDtTS")
- .show(5, False))
+ )
+# fire_ts_df.show(5, False)
 
-
-# In Python to save as a Parquet file
-#parquet_path = ...
-#fire_df.write.format("parquet").save(parquet_path)
-
-# In Python
-#parquet_table = ... # name of the table
-#fire_df.write.format("parquet").saveAsTable(parquet_table)
-
-
-# In Python
-(fire_ts_df
+# Python make queries using format date or timestamp, extract year year()
+fire_extract_df = (fire_ts_df
  .select(year('IncidentDate'))
  .distinct()
  .orderBy(year('IncidentDate'))
- .show())
+ )
+# fire_extract_df.show()
 
-
-# In Python
-(fire_ts_df
+# In Python make grouping from some 
+# What were the most common type of fire calls?
+fire_group_df =(fire_ts_df
  .select("CallType")
  .where(col("CallType").isNotNull())
  .groupBy("CallType")
  .count()
  .orderBy("count", ascending=False)
- .show(n=10, truncate=False))
+ 
+)
+# fire_group_df.show(n=10, truncate=False)
+
+|

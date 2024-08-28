@@ -5,3 +5,4 @@ export SPARK_HOME=/mnt/c/Users/CARLOS/OneDrive/Documentos_Pregado/Escritorio/ICE
 Se debe considerar la ruta donde está la configuracion
 
 o de otra manera podria abrirlo desde wsl ubuntu el cual ya tiene la configuracion de log4j.properties
+[archivo local]

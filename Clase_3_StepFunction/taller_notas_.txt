@@ -1,0 +1,15 @@
+ceja@LAPTOP-D8L000AR:/mnt/c/Users/CARLOS/OneDrive/Documentos_Postgrado/Maestria Ciencia de Datos/Semestre3/Procesamiento Distribuido en Nube/recursos/Taller_AWS$ head -1 Electric_Vehicle_Population_Data.csv | tr ',' '\n' | wc -l
+17
+ceja@LAPTOP-D8L000AR:/mnt/c/Users/CARLOS/OneDrive/Documentos_Postgrado/Maestria Ciencia de Datos/Semestre3/Procesamiento Distribuido en Nube/recursos/Taller_AWS$ wc -l Electric_Vehicle_Population_Data.csv
+200049 Electric_Vehicle_Population_Data.csv
+ceja@LAPTOP-D8L000AR:/mnt/c/Users/CARLOS/OneDrive/Documentos_Postgrado/Maestria Ciencia de Datos/Semestre3/Procesamiento Distribuido en Nube/recursos/Taller_AWS$ head -n 10 Electric_Vehicle_Population_Data.csv
+VIN (1-10),County,City,State,Postal Code,Model Year,Make,Model,Electric Vehicle Type,Clean Alternative Fuel Vehicle (CAFV) Eligibility,Electric Range,Base MSRP,Legislative District,DOL Vehicle ID,Vehicle Location,Electric Utility,2020 Census Tract
+5YJ3E1EB0J,Thurston,Olympia,WA,98512,2018,TESLA,MODEL 3,Battery Electric Vehicle (BEV),Clean Alternative Fuel Vehicle Eligible,215,0,35,104823078,POINT (-122.957046 46.991391),PUGET SOUND ENERGY INC,53067012730
+WA1AAAGE9M,Kitsap,Port Orchard,WA,98367,2021,AUDI,E-TRON,Battery Electric Vehicle (BEV),Clean Alternative Fuel Vehicle Eligible,222,0,35,156660507,POINT (-122.6530052 47.4739066),PUGET SOUND ENERGY INC,53035092901
+5YJ3E1EA2J,Yakima,Yakima,WA,98902,2018,TESLA,MODEL 3,Battery Electric Vehicle (BEV),Clean Alternative Fuel Vehicle Eligible,215,0,14,269374108,POINT (-120.530331 46.59534),PACIFICORP,53077000500
+5YJ3E1EA4N,Yakima,Yakima,WA,98902,2022,TESLA,MODEL 3,Battery Electric Vehicle (BEV),Eligibility unknown as battery range has not been researched,0,0,15,213383894,POINT (-120.530331 46.59534),PACIFICORP,53077001202
+7SAYGAEE2P,Snohomish,Bothell,WA,98012,2023,TESLA,MODEL Y,Battery Electric Vehicle (BEV),Eligibility unknown as battery range has not been researched,0,0,1,229496046,POINT (-122.206146 47.839957),PUGET SOUND ENERGY INC,53061052009
+WBY1Z4C51E,Yakima,Yakima,WA,98908,2014,BMW,I3,Plug-in Hybrid Electric Vehicle (PHEV),Clean Alternative Fuel Vehicle Eligible,72,0,14,8045817,POINT (-120.611068 46.596645),PACIFICORP,53077000401
+5YJSA1DPXC,Thurston,Olympia,WA,98502,2012,TESLA,MODEL S,Battery Electric Vehicle (BEV),Clean Alternative Fuel Vehicle Eligible,265,59900,22,188634442,POINT (-122.943445 47.059252),PUGET SOUND ENERGY INC,53067010600
+5YJSA1H27F,Yakima,Yakima,WA,98908,2015,TESLA,MODEL S,Battery Electric Vehicle (BEV),Clean Alternative Fuel Vehicle Eligible,208,0,14,109175566,POINT (-120.611068 46.596645),PACIFICORP,53077002900
+7FCTGBAA7P,Kitsap,Poulsbo,WA,98370,2023,RIVIAN,R1T,Battery Electric Vehicle (BEV),Eligibility unknown as battery range has not been researched,0,0,23,262803131,POINT (-122.6368884 47.7469547),PUGET SOUND ENERGY INC,53035090400

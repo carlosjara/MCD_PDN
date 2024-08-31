@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession
 
 spark = (SparkSession
             .builder
-            .appName("RowDataFrame-3_6")
+            .appName("RowDataFrame")
             .getOrCreate()
 )
 

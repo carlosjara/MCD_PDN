@@ -1,0 +1,7 @@
+#Ignorar los logs de ejercicios libro
+Clase_5_Docker/book_projects/output
+# Ignorar carpetas de logs de Kafka
+Clase_5_Docker/kafka-cluster-fastapi/kafkadata/
+Clase_5_Docker/kafka-cluster-test/kafkadata1/
+Clase_5_Docker/kafka-cluster-test/kafkadata2/
+Clase_5_Docker/kafka-cluster-test/kafkadata3/

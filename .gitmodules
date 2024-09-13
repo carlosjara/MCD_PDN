@@ -1,3 +1,6 @@
 [submodule "Clase_5_Docker/kafka-api"]
 	path = Clase_5_Docker/kafka-api
 	url = https://github.com/carlosjara/mcd_pdn_kafka_api
+[submodule "Clase_6_AirFlow_Snowflake"]
+	path = Clase_6_AirFlow_Snowflake
+	url = https://github.com/carlosjara/mcd_pdn_airflow_snowflake

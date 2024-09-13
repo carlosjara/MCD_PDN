@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Clase_5_Docker/kafka-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Clase_6_AirFlow_Snowflake" vcs="Git" />
   </component>
 </project>

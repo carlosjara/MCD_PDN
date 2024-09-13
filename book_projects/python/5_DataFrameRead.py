@@ -110,7 +110,7 @@ fire_group_df =(fire_ts_df
  .groupBy("CallType")
  .count()
  .orderBy("count", ascending=False)
- 
+
 )
 # fire_group_df.show(n=10, truncate=False)
 

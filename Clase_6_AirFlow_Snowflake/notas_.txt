@@ -19,3 +19,5 @@ CREATE OR REPLACE STORAGE INTEGRATION s3_int_raw_data
   STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::108782088694:role/snowflake_carlosjaramillo'
   STORAGE_ALLOWED_LOCATIONS = ('s3://bucketarlosjaramillo/folder_carlosjaramillo/','s3://bucketarlosjaramillo/folder_carlosjaramillo/')
   COMMENT = 'This is an optional comment';
+
+DESC INTEGRATION s3_int_raw_data;

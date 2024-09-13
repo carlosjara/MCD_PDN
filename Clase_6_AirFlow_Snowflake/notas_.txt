@@ -1,0 +1,21 @@
+CREATE OR REPLACE DATABASE RAW_DATA;
+
+USE DATABASE RAW_DATA;
+CREATE OR REPLACE SCHEMA conagua_weather;
+
+CREATE OR REPLACE DATABASE CLEAN_DATA;
+
+USE DATABASE CLEAN_DATA;
+CREATE OR REPLACE SCHEMA conagua_weather;
+
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+
+CREATE OR REPLACE STORAGE INTEGRATION s3_int_raw_data
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = S3
+  ENABLED = TRUE
+  STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::108782088694:role/snowflake_carlosjaramillo'
+  STORAGE_ALLOWED_LOCATIONS = ('s3://bucketarlosjaramillo/folder_carlosjaramillo/','s3://bucketarlosjaramillo/folder_carlosjaramillo/')
+  COMMENT = 'This is an optional comment';
